@@ -26,19 +26,22 @@ $(function() {
          * 编写一个测试遍历 allFeeds 对象里面的所有的源来保证有链接字段而且链接不是空的。
          */
          it('feed has a url and url is not empty', function() {
-            for(feed of allFeeds) {
-                expect(feed.url).toBeDefined();
+            for(var i=0;i<allFeeds.length;i++){
+                expect(allFeeds[i].url).toBeDefined();
+                expect(allFeeds[i].length).not.toBe(0);
             }
         });
         /* TODO:
          * 编写一个测试遍历 allFeeds 对象里面的所有的源来保证有名字字段而且不是空的。
          */
          it('feed has a url and url is not empty', function() {
-            for(feed of allFeeds) {
-                expect(feed.name).toBeDefined();
+            for(var i=0;i<allFeeds.length;i++){
+                expect(allFeeds[i].name).toBeDefined();
+                expect(allFeeds[i].length).not.toBe(0);
             }
         });
     });
+
 
 
     /* TODO: 写一个叫做 "The menu" 的测试用例 */
